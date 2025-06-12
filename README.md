@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Formulario de Oferta de Trabajo</title>
+  <title>Job Offer Application Form</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -52,30 +52,29 @@
 <body>
   <div class="container">
     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Microsoft_logo.svg/512px-Microsoft_logo.svg.png" alt="Company Logo" class="logo">
-    <h2>Postúlate a Nuestra Oferta</h2>
-    <form onsubmit="mostrarMensaje(); return false;">
-      <label>Nombre:</label>
-      <input type="text" name="nombre" required>
+    <h2>Apply for Our Job Offer</h2>
+    <form onsubmit="showMessage(); return false;">
+      <label>Name:</label>
+      <input type="text" name="name" required>
 
-      <label>Correo Electrónico:</label>
-      <input type="email" name="correo" required>
+      <label>Email:</label>
+      <input type="email" name="email" required>
 
-      <label>Teléfono:</label>
-      <input type="text" name="telefono" required>
+      <label>Phone:</label>
+      <input type="text" name="phone" required>
 
-      <input type="submit" value="Enviar">
+      <input type="submit" value="Submit">
     </form>
 
-    <div id="mensaje" class="message" style="display:none;">
-      <strong>¡Atención!</strong> Esta fue una simulación de ataque por código QR. Nunca escanees códigos de fuentes no verificadas. Este formulario no recopiló ninguna información.
+    <div id="message" class="message" style="display:none;">
+      <strong>Warning!</strong> This was a QR code phishing simulation. Never scan codes from unverified sources. This form did not collect any information.
     </div>
   </div>
 
   <script>
-    function mostrarMensaje() {
-      document.getElementById('mensaje').style.display = 'block';
+    function showMessage() {
+      document.getElementById('message').style.display = 'block';
     }
   </script>
 </body>
 </html>
-
